@@ -134,7 +134,7 @@ function choix_mots(arr2,nb_ligne) {//Application des option de l'exo
     return arr3_modif;
 }
 
-document.getElementById('file').onchange = function () {
+/*document.getElementById('file').onchange = function () {
 
     var file = this.files[0];
 
@@ -170,7 +170,7 @@ document.getElementById('file').onchange = function () {
         arr = vérification_txt(arr);
     }
     reader.readAsText(file);
-}
+}*/
 
 function correction() {
     console.clear();
@@ -284,16 +284,20 @@ $(document).ready(function () {
 
     $(".dropdown-submenu a.som").on("click", function (event) {
         document.body.style.backgroundColor = "black";
-        document.getElementById("titre_p").style.borderColor = "white";
-        document.getElementById("titre_p").style.color = "white";
+        document.getElementById("titre_p").style.borderColor = "gray";
+        document.getElementById("titre_p").style.color = "gray";
+        //Couleur langue
+        document.getElementById("tab_mot").style.color = "gray";
         document.getElementById("titretab").style.backgroundColor = "orange";
         //document.getElementsByName("nom_opt").style.color = "white";
 
     });
     $(".dropdown-submenu a.no").on("click", function (event) {
-        document.body.style.backgroundColor = "lightgray";
+        document.body.style.backgroundColor = "cornflowerblue";
         document.getElementById("titre_p").style.borderColor = "black";
-        document.getElementById("titre_p").style.borderColor = "black";
+        document.getElementById("titre_p").style.color = "black";
+        //Couleur langue
+        document.getElementById("tab_mot").style.color = "black";
         document.getElementById("titretab").style.backgroundColor = "yellow";
         //document.getElementById("nom_opt").style.color = "darkslateblue";
     });

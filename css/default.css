@@ -1,5 +1,14 @@
 ﻿body {
-    background-color:lightgray;
+    background-color:cornflowerblue;
+}
+
+#acces_voc {
+    float:right;
+    font-size:150%;
+}
+
+#taille_opt {
+    font-size: 150%;
 }
 
 h1 {
@@ -14,7 +23,7 @@ h3{
     padding-bottom:1%;
 }
 #t1{
-    color:red
+    color:yellow;
 }
 #btngene{
     margin-left:4%;
@@ -43,13 +52,13 @@ table {
 
 .dropdown-submenu {
     position: relative;
+    
 }
 
 .dropdown-submenu .dropdown-menu {
         top: 0;
         left: 100%;
-        margin-top: -1px;
-
+        margin-top: -1px;       
 }
 
 #titre_p {
@@ -58,7 +67,7 @@ table {
 
 .cent_para {
     text-align: center;
-    padding-bottom:2%;
+    padding-bottom: 2%;
 }
 
 input[type="radio"] {
@@ -73,13 +82,16 @@ input[type="radio"] {
 #geneaum{
     margin-left:10%
 }
-.dropdown{
-    float:left;
-}
-#file{
-    float:right;
+.dropdown {
+    float: left;
 }
 
 #nom_opt{
     color:darkslateblue;
+}
+
+.cent_lien{
+    text-align:center;
+    margin-top:50px;
+
 }
