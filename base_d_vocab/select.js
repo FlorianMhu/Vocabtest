@@ -1,5 +1,3 @@
-//Base de donnée en interne
-
 //fonction qui se lance à chaque rafraichissement de la page
 if (sessionStorage.butnumber) {//Check le bon bouton
     var i = sessionStorage.butnumber;
