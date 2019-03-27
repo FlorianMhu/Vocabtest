@@ -68,12 +68,13 @@ table {
 .cent_para {
     text-align: center;
     padding-bottom: 2%;
+    padding-top:1%;
 }
 
 input[type="radio"] {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
-    transform: scale(1.5);
+    -ms-transform: scale(2); /* IE 9 */
+    -webkit-transform: scale(2); /* Chrome, Safari, Opera */
+    transform: scale(2);
 }
 
 #corect{
@@ -91,7 +92,7 @@ input[type="radio"] {
 }
 
 .cent_lien{
-    text-align:center;
-    margin-top:50px;
+    margin-left:45%;
+    margin-top:20px;
 
 }

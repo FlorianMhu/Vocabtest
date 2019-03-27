@@ -14,22 +14,46 @@
 </head>
 <body>
 
-    <a href="../index.html" id="acces_voc" class="btn btn-default">Retour</a><br /><br />
+    <button id="acces_voc" class="btn btn-default" onclick="load_data()">Retour</button><br /><br />
 
     <h1>Choisissez une liste de vocabulaire</h1>
 
     <div class="cent_lien">
 
-        <label class="container">
+        <label class="container" id="checkbut">
 
-            <input type="radio" value="0" checked="checked" name="choix1">
+            <input type="radio" value="0" name="choix1">
             <span class="checkmark">&nbsp;&nbsp;</span>
             <a href="vocab_chroma/vocab_chromato.html" id="lien_voc" class="btn btn-default">Vocabulaire Chromatographie</a><br /><br />
 
             <input type="radio" value="1" name="choix1">
             <span class="checkmark">&nbsp;&nbsp;</span>
-            <a href="vocab_laboratory/vocabl_laboratory.html" id="lien_voc" class="btn btn-default">Vocabulaire laboratory</a>
+            <a href="vocab_laboratory/vocabl_laboratory.html" id="lien_voc" class="btn btn-default">Vocabulaire laboratory</a><br /><br />
+
+            <input type="radio" value="2" name="choix1">
+            <span class="checkmark">&nbsp;&nbsp;</span>
+            <a href="" id="lien_voc" class="btn btn-default">Vocabulaire</a><br /><br />
         </label>
     </div>
+
+    <p id="text0" style="display:none"></p>
+
+    <p id="text1" style="display:none">
+        a magnetic stirrer:un agitateur magnétique;compressed air:air comprimé;a permuted water device:un appareil à eau permutée;to heat on a water bath:faire chauffer au bain marie;
+        10^-1/10^-2/10^-3 scales:une balance 10^-1/10^-2/10^-3;a bar magnet:un barreau aimanté;a Bunsen burner:un bec Bunsen;a beaker:un Becher;
+        an overall/laboratory coat:une blouse;a water tank:une bonbonne d'eau;a stopper/a cap:un bouchon;a graduated burette:une burette graduée;a heating mantle:un Chauffe ballon;
+        a weighing dish:une coupelle de pesée;a crystallizer:un cristallisoir;demineralised water:eau permutée;ultra pure water:eau ultra pure;
+        a funnel:un entonnoir;a test tube/a cylinder:une éprouvette;a sink:un évier;filtration:filtration;
+        a graduated flask:une fiole jaugée;a glass bottle:un flacon;the filtrate:le filtrat;gas:le gaz;a micropipette with 1ml tip:une micropipette avec cône de 1ml;
+        a bench:une paillasse;laboratory parafilm:le parafilm;a graduated pipette:une pipette graduée;a volumetric pipette with one mark:une pipette jaugée 1 trait;
+        a volumetric pipette with two marks:une pipette jaugée 2 traits;a propipette:une propipette;
+        a water tank/container:un réservoir d'eau;a tap:un robinet;an extractor hood:une hotte aspirante;a syringe:une seringue;a spatula:une spatule;
+        a thermometer:un thermomètre;a tripod:un trépied;Dewar flask:vase Dewar;
+    </p>
+
+    <p id="text2" style="display:none"></p>
+
+
+    <script type="text/javascript" src="select.js"></script>
 </body>
 </html>

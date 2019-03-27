@@ -11,7 +11,7 @@
     <link href="css/default.css" type="text/css" rel="stylesheet">
     
 </head>
-<body>
+<body onload="return confirmRefresh();">
     <div class="dropdown">
         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
             <div id="taille_opt">
@@ -38,26 +38,26 @@
     <h3><span data-toggle="collapse" data-target="#demo"><strong>>>Paramètrage de l'exercice<<</strong></span></h3>
     <div class="collapse" id="demo">
         <div class="cent_para">
-            <label class="container">
+            <label class="container" id="checkparam1">
                 <!--1er Paramètre-->
-                <span id="t1">Le mot à trouver sera en :&nbsp;</span>
+                <span id="t1">Le mot à trouver sera en :&nbsp;&nbsp;&nbsp;</span>
                 <input type="radio" value="0" checked="checked" name="param1">
                 <span class="checkmark"></span>
-                <b id="nom_opt">Anglais&nbsp;</b>
+                <b id="nom_opt">Anglais&nbsp;&nbsp;&nbsp;</b>
                 <input type="radio" value="1" name="param1">
                 <span class="checkmark"></span>
-                <b id="nom_opt">Français&nbsp;</b>
+                <b id="nom_opt">Français&nbsp;&nbsp;&nbsp;</b>
                 <input type="radio" value="2" name="param1">
                 <span class="checkmark"></span>
                 <b id="nom_opt">Aléatoire</b>
             </label><br />
 
-            <label class="container">
+            <label class="container" id="checkparam2">
                 <!--2ème Paramètre-->
-                <span id="t1">Les mots seront triés :&nbsp;</span>
+                <span id="t1">Les mots seront triés :&nbsp;&nbsp;&nbsp;</span>
                 <input type="radio" value="0" checked="checked" name="param2">
                 <span class="checkmark"></span>
-                <b id="nom_opt">Suivant la liste&nbsp;</b>
+                <b id="nom_opt">Suivant la liste&nbsp;&nbsp;&nbsp;</b>
                 <input type="radio" value="1" name="param2">
                 <span class="checkmark"></span>
                 <b id="nom_opt">Aléatoire</b>
@@ -87,6 +87,7 @@
             <button type="button" id="geneaum" class="btn btn-default" onclick="construction_tableau(1)">Générer d'autre mots</button>
         </div>
     </form>
-        <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/opt.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
