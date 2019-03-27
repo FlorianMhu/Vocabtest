@@ -8,6 +8,12 @@ var arr3_modif;
 var start_ligne = 0;//Ligne de départ pour la génération
 var generation = false; //Si la gération a été effectué
 var compteur_nbcorrect = 0;//Compte le nombre de fois que l'on a appuyé sur le bouton correction
+var max_correct = 4;//Nombre max de correction
+
+//Affichage du nb max
+var btn_correct = document.getElementById("correct")
+btn_correct.innerHTML = "Correction : " + max_correct;
+
 
 function construction_tableau(set) {
     var nb_ligne = document.getElementById("num").value;
@@ -24,6 +30,7 @@ function construction_tableau(set) {
     arr = JSON.parse(sessionStorage.getItem("tableau"));//Récupère les tableaux de vocabulaire
 
     compteur_nbcorrect = 0; //Reset du nombre d'appui
+    btn_correct.innerHTML = "Correction : " + max_correct;
 
     arr2 = JSON.parse(JSON.stringify(arr));
     // Passage d'un tableau global a un local
@@ -147,9 +154,12 @@ function confirmRefresh() {
 
 function correction() {
     console.clear();
- 
+    if ((generation == false) | (compteur_nbcorrect>=4)) {//Ne corrige pas si génération des mots n'est pas effectué
+        return 0;
+    }
     compteur_nbcorrect = compteur_nbcorrect + 1; //Incrémentation du compteur 
-    
+    btn_correct.innerHTML = "Correction : " + (max_correct - compteur_nbcorrect); //Affichage du nb restant de correct
+
     var arr4_ranger = JSON.parse(JSON.stringify(arr3_modif));
     var radios = document.getElementsByName('param1');
     if (radios[0].checked) {//1er paramètre
@@ -180,6 +190,11 @@ function correction() {
             //console.log(undefined);
             erreur = true;
         }
+
+        if ((compteur_nbcorrect == max_correct) & (erreur == false)) {
+            corrige(langue, i, val_lang);
+            erreur = true;//Fait croire au prog qu'il y a une erreur 
+        }
         if (erreur != true) {
             
             console.log(arr2[2][i]+"::")
@@ -205,24 +220,21 @@ function correction() {
             }
 
             if (((mot_reference[0].toLowerCase() + mot_reference.substring(1)) == mot_ecrit) | ((mot_reference[0].toUpperCase() + mot_reference.substring(1)) == mot_ecrit)) {
-                //if()
-                //var element = document.getElementById(langue + i);
-                // element.repl = "lol";//arr2[val_lang][i]; //Avec jquery
-                document.getElementById(langue + i).style.backgroundColor = "white";
-
+                corrige(langue, i, val_lang);
             }
             else {
-                //Si compteur de correction dépasse la valeur entré par l'utilisateur
-                if (compteur_nbcorrect > 5) {
-                    //Afficher les valeurs 
-                }
-                else {
-                    document.getElementById(langue + i).style.backgroundColor = "red";
-                }
-
+                document.getElementById(langue + i).style.backgroundColor = "red";
             }
+
         }
     }
+}
+
+function corrige(langue, i, val_lang) {//langue pour le texte et val_langue sa valeur dans un tableau(0 ou 1)
+    var input = document.getElementById(langue + i)//On se place au niveau de l'input
+    var para = document.createElement('p'); //On crée un élément paragraphe
+    para.appendChild(document.createTextNode(arr2[val_lang][i])); //On insére le bon text dans le paragraphe
+    input.parentNode.replaceChild(para,input)//On remplace l'iput par le paragraphe
 }
 
 //Partie bootstrap

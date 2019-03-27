@@ -89,15 +89,18 @@ function load_data() {
         var text = document.getElementById(nametxt).innerHTML;
         //console.log(text);
 
-        arr = splittxt(text,arr);
+        arr = splittxt(text, arr);
         /*for (i = 0; i < arr[0].length; i++) {
             console.log(arr[0][i] + "==" + arr[1][i]);
         }*/
 
         sessionStorage.setItem("tableau", JSON.stringify(arr));//Upload des données dans le web storage
-        
+
         window.open("../index.html", "_self");//Ouverture page précèdente
-        
+
+    }
+    else {
+        alert("Choisissez du vocabulaire !");
     }
 }
 
