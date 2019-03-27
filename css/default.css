@@ -5,7 +5,8 @@
 #acces_voc {
     float:right;
     font-size:200%;
-    margin:2%;
+    margin-top:2%;
+    margin-right:2%
 }
 
 #taille_opt {
@@ -15,7 +16,7 @@
 h1 {
     text-align:center;
     padding-bottom:2%;
-    margin-top:6%;
+    margin-top:5%;
     padding-top:1%;
 }
 h3{
@@ -26,6 +27,7 @@ h3{
 }
 #t1{
     color:yellow;
+    padding-right:1%;
 }
 #btngene {
     margin-left: 4%;
@@ -59,9 +61,9 @@ table {
 }
 
 .dropdown-submenu .dropdown-menu {
-        top: 0;
-        left: 100%;
-        margin-top: -1px;       
+    top: 0;
+    left: 100%;
+    margin-top: -1px;       
 }
 
 #titre_p {
@@ -90,11 +92,14 @@ input[type="radio"] {
 }
 .dropdown {
     float: left;
-    margin: 2%;
+    margin-top: 2%;
+    margin-left: 2%
 }
 
 #nom_opt{
     color:darkslateblue;
+    padding-left:0.75%;
+    padding-right:2%;
 }
 
 .cent_lien {
