@@ -4,16 +4,18 @@
 
 #acces_voc {
     float:right;
-    font-size:150%;
+    font-size:200%;
+    margin:2%;
 }
 
 #taille_opt {
-    font-size: 150%;
+    font-size: 200%;
 }
 
 h1 {
-    text-align: center;
+    text-align:center;
     padding-bottom:2%;
+    margin-top:6%;
     padding-top:1%;
 }
 h3{
@@ -25,13 +27,14 @@ h3{
 #t1{
     color:yellow;
 }
-#btngene{
-    margin-left:4%;
+#btngene {
+    margin-left: 4%;
+    
 }
-.btnfin{
-    padding-top:1%;
-    padding-bottom:1%;
-    text-align:center;
+.btnfin {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
 }
 th, td {
     padding: 10px;
@@ -77,22 +80,29 @@ input[type="radio"] {
     transform: scale(2);
 }
 
-#corect{
-    margin-right:10%;
+#corect {
+    margin-right: 10%;
+    font-size: 200%;
 }
-#geneaum{
-    margin-left:10%
+#geneaum {
+    margin-left: 10% ;
+    font-size:200%;
 }
 .dropdown {
     float: left;
+    margin: 2%;
 }
 
 #nom_opt{
     color:darkslateblue;
 }
 
-.cent_lien{
-    margin-left:45%;
-    margin-top:20px;
+.cent_lien {
+    margin-left: 40%;
+    margin-top: 20px;
+    padding-bottom:2%;
+}
 
+#lien_voc {
+    font-size: 150%;
 }

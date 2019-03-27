@@ -19,12 +19,12 @@
                 <span class="caret"></span>
             </div>
         </button>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu" style="font-size:200%">
             <li class="dropdown-submenu">
                 <a class="test" tabindex="-1" href="#">Luminosité<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="som" tabindex="-1" href="#">Sombre</a></li>
-                    <li><a class="no" tabindex="-1" href="#">Normal</a></li>
+                    <li><a class="som" tabindex="-1" href="#" style="font-size:200%">Sombre</a></li>
+                    <li><a class="no" tabindex="-1" href="#" style="font-size:200%">Normal</a></li>
                 </ul>
             </li>
         </ul>
@@ -35,7 +35,7 @@
 
     <h1 id="titre_p"><strong>Réviser son vocabulaire d'anglais</strong></h1>
 
-    <h3><span data-toggle="collapse" data-target="#demo"><strong>>>Paramètrage de l'exercice<<</strong></span></h3>
+    <h3><span data-toggle="collapse" data-target="#demo" style="font-size:120%"><strong>>>Paramètrage de l'exercice<<</strong></span></h3>
     <div class="collapse" id="demo">
         <div class="cent_para">
             <label class="container" id="checkparam1">
@@ -83,10 +83,14 @@
 
         <div class="btnfin">
             <button type="button" id="corect" class="btn btn-default" onclick="correction()">Correction</button>
-            <input type="reset" class="btn btn-default">
+            <input type="reset" style="font-size:200%" class="btn btn-default">
             <button type="button" id="geneaum" class="btn btn-default" onclick="construction_tableau(1)">Générer d'autre mots</button>
         </div>
     </form>
+    <br />
+    <p style="color:orange ; text-align:center; font-size:150%"> * Pensez à écrire tous les mots en entier (avec les déterminants)<br />
+        et les deux traductions collés à la virgule si il y en a (a peak : un pic,un sommet), une mise à jour aura lieu bientôt pour améiorer cela</p>
+
     <script type="text/javascript" src="js/opt.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>

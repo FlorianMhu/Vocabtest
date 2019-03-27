@@ -1,9 +1,5 @@
 //Base de donnée en interne
 
-
-
-
-
 //fonction qui se lance à chaque rafraichissement de la page
 if (sessionStorage.butnumber) {//Check le bon bouton
     var i = sessionStorage.butnumber;
@@ -68,7 +64,7 @@ function verification_txt(tabletxt) {
     for (var lang = 0; lang < 2; lang++) {
         for (i = 0; i < tabletxt[0].length; i++) {
             //Supression des sauts de ligne éventuels et espaces en début de chaîne
-            // console.log(tabletxt[lang][i]);
+            //console.log(tabletxt[lang][i]);
 
             while ((tabletxt[lang][i][0] == "\r") | (tabletxt[lang][i][0] == "\n") | (tabletxt[lang][i][0] == " ")) {
                 tabletxt[lang][i] = tabletxt[lang][i].slice(1);
@@ -96,12 +92,12 @@ function load_data() {
         //console.log(text);
 
         arr = splittxt(text,arr);
-        for (i = 0; i < arr[0].length; i++) {
+        /*for (i = 0; i < arr[0].length; i++) {
             console.log(arr[0][i] + "==" + arr[1][i]);
-        }
+        }*/
 
-        sessionStorage.tableau = arr;//Upload des données dans le web storage
-
+        sessionStorage.setItem("tableau", JSON.stringify(arr));//Upload des données dans le web storage
+        
         window.open("../index.html", "_self");//Ouverture page précèdente
         
     }

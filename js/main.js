@@ -14,12 +14,15 @@ function construction_tableau(set) {
     var nb_ligne = parseInt(nb_ligne, 10);
     if (nb_ligne > 100) {//Si nombre trop élevé
         nb_ligne = 100;
-        alert("Nombre de mot maximum = 50")
+        alert("Nombre de mot maximum = 100")
     }
-    arr = sessionStorage.tableau;
-    for (i = 0; i < arr[0].length; i++) {
-        console.log(arr[0][i] + "==" + arr[1][i]);
+    if (!sessionStorage.tableau) { //Test si l'utilisateur à choisi son vocabulaire
+        alert("Choisissez le vocabulaire !");
+        return 0;
     }
+
+    arr = JSON.parse(sessionStorage.getItem("tableau"));//Récupère les tableaux de vocabulaire
+
     compteur_nbcorrect = 0; //Reset du nombre d'appui
 
     arr2 = JSON.parse(JSON.stringify(arr));
