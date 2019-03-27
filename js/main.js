@@ -154,7 +154,7 @@ function confirmRefresh() {
 
 function correction() {
     console.clear();
-    if ((generation == false) | (compteur_nbcorrect>=4)) {//Ne corrige pas si génération des mots n'est pas effectué
+    if ((generation == false) | (compteur_nbcorrect >= max_correct)) {//Ne corrige pas si génération des mots n'est pas effectué
         return 0;
     }
     compteur_nbcorrect = compteur_nbcorrect + 1; //Incrémentation du compteur 
@@ -191,10 +191,6 @@ function correction() {
             erreur = true;
         }
 
-        if ((compteur_nbcorrect == max_correct) & (erreur == false)) {
-            corrige(langue, i, val_lang);
-            erreur = true;//Fait croire au prog qu'il y a une erreur 
-        }
         if (erreur != true) {
             
             console.log(arr2[2][i]+"::")
@@ -220,19 +216,29 @@ function correction() {
             }
 
             if (((mot_reference[0].toLowerCase() + mot_reference.substring(1)) == mot_ecrit) | ((mot_reference[0].toUpperCase() + mot_reference.substring(1)) == mot_ecrit)) {
-                corrige(langue, i, val_lang);
+                corrige(langue, i, val_lang,1); //1 car bonne valeur
             }
             else {
-                document.getElementById(langue + i).style.backgroundColor = "red";
-            }
+                //Si compteur de correction dépasse la valeur entré par l'utilisateur
+                if (compteur_nbcorrect >= max_correct) {
+                    corrige(langue, i, val_lang,0);//0 car pas réussi à trouver la valeur
+                }
+                else {
+                    document.getElementById(langue + i).style.backgroundColor = "red";
+                }
+            } 
 
         }
     }
 }
 
-function corrige(langue, i, val_lang) {//langue pour le texte et val_langue sa valeur dans un tableau(0 ou 1)
+function corrige(langue, i, val_lang,reussi)//langue pour le texte et val_langue sa valeur dans un tableau(0 ou 1)
+{
     var input = document.getElementById(langue + i)//On se place au niveau de l'input
     var para = document.createElement('p'); //On crée un élément paragraphe
+    if (reussi == 0) {//Si l'utilisateur n'a pas trouvé on écrit en ruge le mot
+        para.setAttribute("style", "color:yellow");
+    }   
     para.appendChild(document.createTextNode(arr2[val_lang][i])); //On insére le bon text dans le paragraphe
     input.parentNode.replaceChild(para,input)//On remplace l'iput par le paragraphe
 }
