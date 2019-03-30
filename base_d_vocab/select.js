@@ -1,9 +1,13 @@
 //fonction qui se lance à chaque rafraichissement de la page
-if (sessionStorage.butnumber) {//Check le bon bouton
-    var i = sessionStorage.butnumber;
-    var radios = document.getElementsByName('choix1');
-    radios[i].checked = true;
-
+try {
+    if (sessionStorage.butnumber) {//Check le bon bouton
+        var i = sessionStorage.butnumber;
+        var radios = document.getElementsByName('choix1');
+        radios[i].checked = true;
+    }
+}
+catch (err) {
+    //console.log(err);
 }
 
 document.getElementById('checkbut').onchange = function () {

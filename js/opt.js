@@ -38,14 +38,19 @@ document.getElementById('checkparam2').onchange = function () {
 }
 
 //fonction qui se lance à chaque rafraichissement de la page
-if (sessionStorage.opt1num) {//Check le bon bouton
-    var i = sessionStorage.opt1num;
-    var radios = document.getElementsByName('param1');
-    radios[i].checked = true;
-}
+try {
+    if (sessionStorage.opt1num) {//Check le bon bouton
+        var i = sessionStorage.opt1num;
+        var radios = document.getElementsByName('param1');
+        radios[i].checked = true;
+    }
 
-if (sessionStorage.opt2num) {//Check le bon bouton
-    var i = sessionStorage.opt2num;
-    var radios = document.getElementsByName('param2');
-    radios[i].checked = true;
+    if (sessionStorage.opt2num) {//Check le bon bouton
+        var i = sessionStorage.opt2num;
+        var radios = document.getElementsByName('param2');
+        radios[i].checked = true;
+    }
+}
+catch(err){
+    //console.log(err);
 }
