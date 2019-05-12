@@ -2,11 +2,11 @@
     background-color:cornflowerblue;
 }
 
-#acces_voc {
-    float:right;
-    font-size:200%;
-    margin-top:2%;
-    margin-right:2%
+#acces_voc, #acces_irr {
+    float: right;
+    font-size: 200%;
+    margin-top: 2%;
+    margin-right: 2%
 }
 
 #taille_opt {
@@ -23,7 +23,6 @@ h3{
     text-align:center;
     cursor:pointer;
     color:blue;
-    padding-bottom:1%;
 }
 #t1{
     color:yellow;
@@ -103,11 +102,11 @@ input[type="radio"] {
 }
 
 .cent_lien {
-    margin-left: 40%;
+    text-align:center;
     margin-top: 20px;
     padding-bottom:2%;
 }
 
 #lien_voc {
-    font-size: 150%;
+    font-size: 200%;
 }

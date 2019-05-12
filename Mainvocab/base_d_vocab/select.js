@@ -10,6 +10,13 @@ catch (err) {
     //console.log(err);
 }
 
+//Gestion du paramètre de luminosité
+if (sessionStorage.lum_som == true) {
+    document.body.style.backgroundColor = "black";
+    document.getElementById("titre_p").style.borderColor = "gray";
+    document.getElementById("titre_p").style.color = "gray";
+}
+
 document.getElementById('checkbut').onchange = function () {
     //Test du web storage
     if (typeof (Storage) !== "undefined") {
@@ -100,7 +107,7 @@ function load_data() {
 
         sessionStorage.setItem("tableau", JSON.stringify(arr));//Upload des données dans le web storage
 
-        window.open("../index.html", "_self");//Ouverture page précèdente
+        window.open("../mainvocab.html", "_self");//Ouverture page précèdente
 
     }
     else {

@@ -14,7 +14,6 @@ var max_correct = 4;//Nombre max de correction
 var btn_correct = document.getElementById("correct");
 btn_correct.innerHTML = "Correction : " + max_correct;
 
-
 function construction_tableau(set) {
     var nb_ligne = document.getElementById("num").value;
     var nb_ligne = parseInt(nb_ligne, 10);
@@ -133,10 +132,10 @@ function choix_mots(arr2,nb_ligne) {//Application des option de l'exo
             arr4_ran[0].splice(x, 1);
             arr4_ran[1].splice(x, 1);
             arr4_ran[2].splice(x, 1);           
-            /*for (var j = 0; j < arr4_ran[0].length; j++) {
+           /* for (var j = 0; j < arr4_ran[0].length; j++) {
                 console.log(arr4_ran[0][j] + " |traduction| " + arr4_ran[1][j] + " et " + (j + 1));
             }
-            console.log("---------------------")*/
+            console.log("---------------------");*/
         }
         for (i = 0; i < 3; i++) {
             arr3_modif[i].splice(nb_ligne, arr3_modif[i].length);
@@ -145,11 +144,6 @@ function choix_mots(arr2,nb_ligne) {//Application des option de l'exo
     }
 
     return arr3_modif;
-}
-
-function confirmRefresh() {
-    console.log("refresh");
-
 }
 
 function correction() {
@@ -183,8 +177,14 @@ function correction() {
                     var langue = "français";
                 }
             }
+        //Explication : arr3_modif possède dans sa dernière colonne les infos sur la langue avant (si l'option coché) que le les premières
+        //colonne du tableau ne soit changées. Donc lorsque que l'on rentre dans la boucle for(i) la dernière colonne du tableau est analysée
+        //Et on peut ressortir la valeur de langue 0(anglais) ou 1(français) et l'uitiliser pour trouver l'input qui sera à la même val de i
+        //console.log(arr3_modif[3][i] + " " + i);
+        
         try {
             var data = document.getElementById(langue + i).value;//Récupération des données entrées par l'utilisateur dans l'input
+            //console.log("Une data :" + langue + i);
         }
         catch(err) {
             //console.log(err);
@@ -240,34 +240,5 @@ function corrige(langue, i, val_lang,reussi)//langue pour le texte et val_langue
         para.setAttribute("style", "color:yellow");
     }   
     para.appendChild(document.createTextNode(arr2[val_lang][i])); //On insére le bon text dans le paragraphe
-    input.parentNode.replaceChild(para, input);//On remplace l'iput par le paragraphe
+    input.parentNode.replaceChild(para, input);//On remplace l'input par le paragraphe
 }
-
-//Partie bootstrap
-$(document).ready(function () {
-    $('.dropdown-submenu a.test').on("click", function (e) {
-        $(this).next('ul').toggle();
-        e.stopPropagation();
-        e.preventDefault();
-    });
-
-    $(".dropdown-submenu a.som").on("click", function (event) {
-        document.body.style.backgroundColor = "black";
-        document.getElementById("titre_p").style.borderColor = "gray";
-        document.getElementById("titre_p").style.color = "gray";
-        //Couleur langue
-        document.getElementById("tab_mot").style.color = "gray";
-        document.getElementById("titretab").style.backgroundColor = "orange";
-        //document.getElementsByName("nom_opt").style.color = "white";
-
-    });
-    $(".dropdown-submenu a.no").on("click", function (event) {
-        document.body.style.backgroundColor = "cornflowerblue";
-        document.getElementById("titre_p").style.borderColor = "black";
-        document.getElementById("titre_p").style.color = "black";
-        //Couleur langue
-        document.getElementById("tab_mot").style.color = "black";
-        document.getElementById("titretab").style.backgroundColor = "yellow";
-        //document.getElementById("nom_opt").style.color = "darkslateblue";
-    });
-});

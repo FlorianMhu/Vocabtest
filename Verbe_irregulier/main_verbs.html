@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>Verbes irréguliers</title>
+
+    <link rel="stylesheet" href="../Mainvocab/lib/bootstrap.min.css">
+    <script src="../Mainvocab/lib/jquery.min.js"></script>
+    <script src="../Mainvocab/lib/bootstrap.min.js"></script>
+    <link rel="icon" type="image/png" href="../Mainvocab/logo.png" />
+    <link href="../Mainvocab/css/default.css" type="text/css" rel="stylesheet">
+</head>
+<body onload="return confirmRefresh();">
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+            <div id="taille_opt">
+                Paramètre
+                <span class="caret"></span>
+            </div>
+        </button>
+        <ul class="dropdown-menu" style="font-size:200%">
+            <li class="dropdown-submenu">
+                <a class="test" tabindex="-1" href="#">Luminosité<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="som" tabindex="-1" href="#" style="font-size:200%">Sombre</a></li>
+                    <li><a class="no" tabindex="-1" href="#" style="font-size:200%">Normal</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <button type="button" id="acces_irr" class="btn btn-default" onclick="load_data();">Chargement des verbes : Non</button><br />
+
+
+    <h1 id="titre_p"><strong>Réviser ses verbes irréguliers</strong></h1>
+
+    <h3><span data-toggle="collapse" data-target="#demo" style="font-size:120%"><strong>--------Paramètrage de l'exercice--------<br />(cliquez ici)</strong></span></h3>
+
+    <div class="collapse" id="demo">
+        <div class="cent_para">
+            <label class="container" id="checkirr1">
+                <!--1er Paramètre-->
+                <span id="t1">Le mot déjà donné est : </span>
+                <input type="radio" value="0" checked="checked" name="param1irr">
+                <span class="checkmark"></span>
+                <b id="nom_opt">La base verbale</b>
+
+                <input type="radio" value="1" name="param1irr">
+                <span class="checkmark"></span>
+                <b id="nom_opt">Le prétérit</b>
+
+                <input type="radio" value="2" name="param1irr">
+                <span class="checkmark"></span>
+                <b id="nom_opt">Le participe passé</b>
+
+                <input type="radio" value="3" name="param1irr">
+                <span class="checkmark"></span>
+                <b id="nom_opt">La traduction</b>
+
+                <input type="radio" value="4" name="param1irr">
+                <span class="checkmark"></span>
+                <b id="nom_opt">Aléatoire</b>
+            </label><br />
+
+            <label class="container" id="checkirr2">
+                <!--2ème Paramètre-->
+                <span id="t1">Les mots seront triés :</span>
+                <input type="radio" value="0" checked="checked" name="param2irr">
+                <span class="checkmark"></span>
+                <b id="nom_opt">Suivant l'ordre alphabétique</b>
+
+                <input type="radio" value="1" name="param2irr">
+                <span class="checkmark"></span>
+                <b id="nom_opt">Aléatoire</b>
+            </label><br />
+
+            <label id="t1">Nombre de mot affiché par page :</label>
+            <input type="number" value="10" min="1" max="100" id="num" name="num" />
+            <button type="button" class="btn btn-default" id="btngene" onclick="construction_tableau(0);">Générer les mots</button>
+        </div>
+    </div>
+    <form action="/action_page.php" autocomplete="off">
+        <table>
+            <thead>
+                <tr id="titretab">
+                    <th>N°</th>
+                    <th>Base verbale</th>
+                    <th>Prétérit</th>
+                    <th>Participe passé</th>
+                    <th>Traduction</th>
+                </tr>
+            </thead>
+            <tbody id="tab_mot"></tbody>
+        </table>
+
+
+        <div class="btnfin">
+            <button type="button" id="correct" class="btn btn-default" onclick="correction()"></button>
+            <input type="reset" style="font-size:200%" class="btn btn-default">
+            <button type="button" id="geneaum" class="btn btn-default" onclick="construction_tableau(1)">Générer d'autre mots</button>
+        </div>
+    </form>
+    <br />
+    <p style="color:orange ; text-align:center; font-size:150%">
+        * Pensez à écrire tous les mots en entier (avec les déterminants)<br />
+        et les deux traductions collés à la virgule si il y en a (a peak : un pic,un sommet), une mise à jour aura lieu bientôt pour améiorer cela
+    </p>
+    <a href="../index.html" class="btn btn-default" id="acces_voc">Retour</a>
+
+    <script type="text/javascript" src="../Mainvocab/js/opt.js"></script>
+    <script type="text/javascript" src="js/mainirr.js"></script>
+    <script type="text/javascript" src="js/select.js"></script>
+    <script type="text/javascript" src="js/verbslist.js"></script>
+</body>
+</html>
