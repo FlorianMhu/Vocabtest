@@ -217,7 +217,6 @@ function correction() {
     }
 
     for (var i = 0; i < irr2[0].length; i++) {
-        var erreur = false;//Si il peut continuer le programme de correction
         if (radios[4].checked) {//5ème paramètre Aléatoire
             //Sélectionne la case de forme aléatoire choisie
             var forme = JSON.parse(JSON.stringify(liste));//Variable pour enregistrer la forme choisie aléatoierement
@@ -228,21 +227,21 @@ function correction() {
             //Les 2 dernière colonne du tableau irr3_modif contiennent toutes les infos avant l'aléa et sont bien rangées
         }
         //console.log(irr3_modif[6][i]);
-        try {
-            var data = [];
-            for (var t = 0; t < forme.length; t++) {
+        for (var t = 0; t < forme.length; t++) {//Pour tous les input possible, si on a déjç rentré une bonne val, on peut refaire les test pour la ligne
+            var erreur = false;//Si il peut continuer le programme de correction
+            try {
+                var data = [];
                 data[t] = document.getElementById(forme[t] + i).value;//Récupération des données entrées par l'utilisateur dans l'input
             }
-        }
-        catch (err) {
-            //console.log(err);
-            erreur = true;
-        }
 
-        if (erreur != true) {
+            catch (err) {
+                //console.log(err);
+                erreur = true;
+            }
+        
+            if (erreur != true) {
 
-            console.log(irr2[4][i] + "::");
-            for (var t = 0; t < forme.length; t++) {//On s'occupe des différents input
+                console.log(irr2[4][i] + "::");
 
                 irr4_ranger[val_forme[t]][i] = data[t];//Pour l'aléatoire et le normal on trouve où doit se ranger la valeur
 
@@ -275,7 +274,7 @@ function correction() {
                         document.getElementById(forme[t] + i).style.backgroundColor = "red";
                     }
                 }
-
+                
             }
         }
         

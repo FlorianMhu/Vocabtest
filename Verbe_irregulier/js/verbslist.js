@@ -13,7 +13,7 @@ build	built	built	construire
 burn	burnt	burnt	brûler
 burst	burst	burst	éclater
 buy	bought	bought	acheter
-cast	cast	cast	lancer
+cast	cast	cast	lancer(sorts)
 catch	caught	caught	attraper
 choose	chose	chosen	choisir
 come	came	come	venir
@@ -43,7 +43,7 @@ grow	grew	grown	pousser(croître)
 have	had	had	avoir
 hear	heard	heard	entendre
 hide	hid	hidden	cacher
-hit	hit	hit	frapper
+hit	hit	hit	tapper
 hold	held	held	tenir
 hang	hung	hung	pendre/suspendre
 hurt	hurt	hurt	blesser
