@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form id="test">
+        <label><input type="radio" name="test" id="r1" value="A"> A</label>
+        <label><input type="radio" name="test" id="r2" value="B" checked="checked"> B</label>
+        <label><input type="radio" name="test" id="r3" value="C"> C</label>
+
+    </form>
+
+    <button type="button" onclick="test();">TEST</button>
+
+    <script>
+        function test() {
+            if (document.getElementById('r1').checked) {
+                rate_value = document.getElementById('r1').value;
+            }
+            if (document.getElementById('r2').checked) {
+                rate_value = document.getElementById('r2').value;
+            }
+            if (document.getElementById('r3').checked) {
+                rate_value = document.getElementById('r3').value;
+            }
+            alert(rate_value);
+        }
+
+    </script>
+</body>
+
+</html>

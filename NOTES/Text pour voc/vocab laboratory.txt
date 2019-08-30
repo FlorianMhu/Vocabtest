@@ -1,0 +1,10 @@
+﻿a magnetic stirrer:un agitateur magnétique;compressed air:air comprimé;a permuted water device:un appareil à eau permutée;to heat on a water bath:faire chauffer au bain marie;
+10^-1/10^-2/10^-3 scales:une balance 10^-1/10^-2/10^-3;a bar magnet:un barreau aimanté;a Bunsen burner:un bec Bunsen;a beaker:un Becher;
+an overall/laboratory coat:une blouse;a water tank:une bonbonne d'eau;a stopper/a cap:un bouchon;a graduated burette:une burette graduée;a heating mantle:un Chauffe ballon;
+a weighing dish:une coupelle de pesée;a crystallizer:un cristallisoir;demineralised water:eau permutée;ultra pure water:eau ultra pure;
+a funnel:un entonnoir;a test tube/a cylinder:une éprouvette;a sink:un évier;filtration:filtration;
+a graduated flask:une fiole jaugée;a glass bottle:un flacon;the filtrate:le filtrat;gas:le gaz;a micropipette with 1ml tip:une micropipette avec cône de 1ml;
+a bench:une paillasse;laboratory parafilm:le parafilm;a graduated pipette:une pipette graduée;a volumetric pipette with one mark:une pipette jaugée 1 trait;
+a volumetric pipette with two marks:une pipette jaugée 2 traits;a propipette:une propipette;
+a water tank/container:un réservoir d'eau;a tap:un robinet;an extractor hood:une hotte aspirante;a syringe:une seringue;a spatula:une spatule;
+a thermometer:un thermomètre;a tripod:un trépied;Dewar flask:vase Dewar;

@@ -1,0 +1,21 @@
+a column:une colonne ; a solvent:un solvant ; a particle : une particule ; a polarity :une polarité;
+ a component:un composant ; a chromatograph:un chromatographe ;a chromatogram :un chromatogramme;
+ silica : la silice ; a compound : un composé ; a mixture : un mélange ; a bond : une liaison ;
+ Van der Waals forces : les forces de Van der Waals ; solubility : solubilité ; a sample : un échantillon ;
+ retention time : temps de rétention ; a peak : un pic,un sommet ; a beam : faisceau,rayon ; 
+a detector : un détecteur ; a phase: une phase ; a solute : un soluté ; an analyte: un analyte ; 
+a principle : un principe ; ion exchange chromatography column : colonne de chromatographie à échange d'ions ;
+ anion :anion; cation:cation ; equilibrium constant : constante d'équilibre ; an apparatus: un appareil,un instrument,un équipement ;
+ a pump :une pompe; a syringe : une seringue ; adsorption : adsorption ; a dye : un colorant ; an area : une aire ;
+ a baseline : une ligne de base ; a standard solution : une solution étalon ; a stock solution : une solution mère ;
+ a calibration curve : une droite d'étalonnage ; an eluent : un éluant ; an elution : une élution ; a dilution:une dilution ;
+ an injector : un injecteur ; dissolution : une dissolution ;
+ a flow : un débit
+stationary: stationnaire,fixe ; mobile:mobile ; polar:polaire; non-polar : apolaire ; soluble:soluble ;
+ volatile:volatile ; porous : poreux ; versatile : polyvalent; capillary : capillaire ; forensic : médico-légal,scientifique;
+forensic medicine: médecine légale; forensic science: police technique et scientifique;
+ forensic scientist : technicien,ingénieur de la police scientifique
+to drip : goutter ; to flow : couler,s'écouler ; to separate : séparer ; to bind: lier,relier ;
+ to purify :purifier; to pour : verser ; to elute : éluer ; to operate : faire fonctionner ; to interact :intéragir;
+ to absorb:absorber ; to diffuse : se diffuser,se disperser ; to bond : lier,coller ; to dye : teinter,colorer ;
+ to inject : injecter ; to fill : remplir ; to load : charger

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html lang="fr"> 
+<head>
+    <meta charset="utf-8" />
+    <title>Learn English vocab</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+            Paramètre
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+                <a class="test" tabindex="-1" href="#">Luminosité<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="som" tabindex="-1" href="#">Sombre</a></li>
+                    <li><a class="no" tabindex="-1" href="#">Normal</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <input type="file" class="btn btn-default" accept='text/plain' id="file" /><br />
+
+    <h1 id="titre_p"><strong>Réviser son vocabulaire d'anglais</strong></h1>
+
+    <h3><span data-toggle="collapse" data-target="#demo"><strong>Paramètrage de l'exercice</strong></span></h3>
+    <div class="collapse" id="demo">
+        <div class="cent_para">
+            <label class="container">
+                <!--1er Paramètre-->
+                <span id="t1">Le mot à trouver sera en :&nbsp;</span>
+                <input type="radio" value="0" checked="checked" name="param1">
+                <span class="checkmark"></span>
+                <b id="nom_opt">Anglais&nbsp;</b>
+                <input type="radio" value="1" name="param1">
+                <span class="checkmark"></span>
+                <b id="nom_opt">Français&nbsp;</b>
+                <input type="radio" value="2" name="param1">
+                <span class="checkmark"></span>
+                <b id="nom_opt">Aléatoire</b>
+            </label><br />
+
+            <label class="container">
+                <!--2ème Paramètre-->
+                <span id="t1">Les mots seront triés :&nbsp;</span>
+                <input type="radio" value="0" checked="checked" name="param2">
+                <span class="checkmark"></span>
+                <b id="nom_opt">Suivant la liste&nbsp;</b>
+                <input type="radio" value="1" name="param2">
+                <span class="checkmark"></span>
+                <b id="nom_opt">Aléatoire</b>
+            </label><br />
+
+            <label id="t1">Nombre de mot affiché par page :</label>
+            <input type="number" value="10" min="1" max="50" id="num" name="num" />
+            <button type="button" class="btn btn-default" id="btngene" onclick="construction_tableau(0);">Générer les mots</button>
+        </div>
+    </div>
+    <form action="/action_page.php" autocomplete="off">
+        <table>
+            <thead>
+                <tr id="titretab">
+                    <th>N°</th>
+                    <th>Mots anglais</th>
+                    <th>Mots français</th>
+                </tr>
+            </thead>
+            <tbody id="tab_mot"></tbody>
+        </table>
+
+
+        <div class="btnfin">
+            <button type="button" id="corect" class="btn btn-default" onclick="correction()">Correction</button>
+            <input type="reset" class="btn btn-default">
+            <button type="button" id="geneaum" class="btn btn-default" onclick="construction_tableau(1)">Générer d'autre mots</button>
+        </div>
+    </form>
+        <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

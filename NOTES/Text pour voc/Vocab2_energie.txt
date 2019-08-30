@@ -1,0 +1,10 @@
+﻿the reactor pit:le puits du réacteur;the core:le coeur;a deadline:une date butoir;the staff(a member of staff):le personnel,les employés;nuclear waste:les déchets nucléaires;isotope:isotope;on the brink of:au bord de;a pellet:une pastille,une granule;a downside:un inconvénient;a nucleus/2 nuclei:un noyau/2 noyaux;a power plant:une centrale;a gamble:un pari(au casino, un jeu),une entreprise risquée;hydraulic fracturing/fracking:fracturation hydraulique;a shaft:un puits;a greenhouse gas:un gaz à effet de serre;a borehole:un forage;a wind farm:un parc éolien;a drought:une sécheresse;an average:une moyenne;a component:un composant;a blade:une lame/une pale;the grid:le réseau électrique;a pollutant:un polluant;a range:une gamme,un éventail;
+
+
+harmful:dangereux,nocif;sustainable(sustainable development):durable;self sustaining:indépendante;limitless:illimité;finite(a finite resource):limité;unproven:non prouvé,supposé;porous:poreux(se);exhausted:épuisé;hazardous(a hazard):dangereux(un danger);carcinogenic:cancérigène;steady:constant,régulier;tremendous:énorme,immense;onshore:terrestre;offshore:au large;valuable:de valeur,précieux;
+
+
+to work to a deadline:avoir des délais à respecter;to meet a deadline:finir dans les délais;to rely on:se fier à,compter sur,dépendre de;to harness:maîtriser,exploiter;to ignite:prendre feu;to yield:produire;to fuse,to merge:fusionner;to take a gamble:prendre un risque;to repel:repousser;to squeeze:presser,serrer;to sift:passer au crible,filtrer,tamiser;to seep:s’infiltrer,suinter;to bounce:sauter,rebondir;to seal:sceller,boucher;to assess:évaluer;to bore:forer,creuser;to drill for(sthg):faire un forage;to harvest:récolter,produire;to supply:fournir,approvisionner;
+
+
+58 mots

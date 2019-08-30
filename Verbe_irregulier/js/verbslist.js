@@ -1,5 +1,5 @@
 ﻿const data = `
-be	was,were	been	être
+be	was/were	been	être
 become	became	become	devenir
 begin	began	begun	commencer
 bend	bent	bent	courber
@@ -54,7 +54,7 @@ lead	led	led	mener
 leap	leapt	leapt	sauter
 learn	learnt	learnt	apprendre
 leave	left	left	quitter
-lend	lent	lent	préter
+lend	lent	lent	prêter
 let	let	let	laisser
 lie	lay	lain	être couché
 light	lit	lit	allumer
