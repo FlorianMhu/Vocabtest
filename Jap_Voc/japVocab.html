@@ -1,53 +1,32 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
-<html lang="fr"> 
+<html lang="fr">
 <head>
-    <meta charset="utf-8" />
-    <title>Learn English vocab</title>
-    <link rel="stylesheet" href="lib/bootstrap.min.css">
-    <script src="lib/jquery.min.js"></script>
-    <script src="lib/bootstrap.min.js"></script>
-    <link rel="icon" type="image/png" href="logo.png" />
-    <link href="css/default.css" type="text/css" rel="stylesheet">
-    
+    <meta charset="utf-8"/>
+    <title>Learn Japanese vocabulary</title>
+    <link rel="stylesheet" href="../Mainvocab/lib/bootstrap.min.css">
+    <script src="../Mainvocab/lib/jquery.min.js"></script>
+    <script src="../Mainvocab/lib/bootstrap.min.js"></script>
+    <link href="../Mainvocab/css/default.css" type="text/css" rel="stylesheet">
 </head>
-<body onload="return confirmRefresh();">
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-            <div id="taille_opt">
-                Paramètre
-                <span class="caret"></span>
-            </div>
-        </button>
-        <ul class="dropdown-menu" style="font-size:200%">
-            <li class="dropdown-submenu">
-                <a class="test" tabindex="-1" href="#">Luminosité<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="som" tabindex="-1" href="#" style="font-size:200%">Sombre</a></li>
-                    <li><a class="no" tabindex="-1" href="#" style="font-size:200%">Normal</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
 
-    <a href="base_d_vocab/vocab.html" id="acces_voc" class="btn btn-default">Sélection du vocabulaire</a><br />
-
-
-    <h1 id="titre_p"><strong>Réviser son vocabulaire d'anglais</strong></h1>
+<body>
+    <h1 id="titre_p"><strong>Learn JLPT N5 Vocabulary</strong></h1>
 
     <h3><span data-toggle="collapse" data-target="#demo" style="font-size:120%"><strong>--------Paramètrage de l'exercice--------<br />(cliquez ici)</strong></span></h3>
     
-    <div class="collapse" id="demo">
+    <div class="collapse" id="demo"></div>
         <div class="cent_para">
+
             <label class="container" id="checkparam1">
                 <!--1er Paramètre-->
-                <span id="t1">Le mot à trouver sera en :</span>
+                <span id="t1">The word to be find is in : </span>
                 <input type="radio" value="0" checked="checked" name="param1">
                 <span class="checkmark"></span>
-                <b id="nom_opt">Anglais</b>
+                <b id="nom_opt">French</b>
                 <input type="radio" value="1" name="param1">
                 <span class="checkmark"></span>
-                <b id="nom_opt">Français</b>
+                <b id="nom_opt">Japanese</b>
                 <input type="radio" value="2" name="param1">
                 <span class="checkmark"></span>
                 <b id="nom_opt">Aléatoire</b>
@@ -69,12 +48,13 @@
             <button type="button" class="btn btn-default" id="btngene" onclick="construction_tableau(0);">Générer les mots</button>
         </div>
     </div>
+
     <form action="/action_page.php" autocomplete="off">
         <table>
             <thead>
                 <tr id="titretab">
                     <th>N°</th>
-                    <th>Mots anglais</th>
+                    <th>Mots Japonais</th>
                     <th>Mots français</th>
                 </tr>
             </thead>
@@ -88,14 +68,8 @@
             <button type="button" id="geneaum" class="btn btn-default" onclick="construction_tableau(1)">Générer d'autre mots</button>
         </div>
     </form>
-    <br />
-    <p style="color:orange ; text-align:center; font-size:150%">
-        * Pensez à écrire tous les mots en entier (avec les déterminants)<br />
-        et les deux traductions collés à la virgule si il y en a (a peak : un pic,un sommet), une mise à jour aura lieu bientôt pour améiorer cela
-    </p>
-    <a href="../index.html"  class="btn btn-default" id="acces_voc">Retour</a>
 
+    <a href="../index.html"  class="btn btn-default" id="acces_voc">Retour</a>
     <script type="text/javascript" src="js/opt.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
-</html>

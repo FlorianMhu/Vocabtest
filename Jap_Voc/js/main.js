@@ -1,5 +1,4 @@
-﻿//document.getElementById('tt').innerHTML = "Et ceci du Javascript";
-var arr = [];
+﻿var arr = [];
 for (var i = 0; i < 4; i++) {//4 colonne de tableau: mots anglais, mots français, le num de ligne pour le mot, et la langue (0-> anglais , 1 ->français)
     arr[i] = [];
 }
