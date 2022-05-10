@@ -1,4 +1,4 @@
-//fonction qui se lance à chaque rafraichissement de la page
+//fonction qui se lance ï¿½ chaque rafraichissement de la page
 try {
     if (sessionStorage.butnumber) {//Check le bon bouton
         var i = sessionStorage.butnumber;
@@ -10,7 +10,7 @@ catch (err) {
     //console.log(err);
 }
 
-//Gestion du paramètre de luminosité
+//Gestion du paramï¿½tre de luminositï¿½
 if (sessionStorage.lum_som == true) {
     document.body.style.backgroundColor = "black";
     document.getElementById("titre_p").style.borderColor = "gray";
@@ -22,19 +22,19 @@ document.getElementById('checkbut').onchange = function () {
     if (typeof (Storage) !== "undefined") {
         var radios = document.getElementsByName('choix1');
 
-        if (radios[0].checked) {//1er paramètre check
+        if (radios[0].checked) {//1er paramï¿½tre check
             sessionStorage.butnumber = 0;
         }
-        if (radios[1].checked) {//2ème paramètre check
+        if (radios[1].checked) {//2ï¿½me paramï¿½tre check
             sessionStorage.butnumber = 1;
         }
-        if (radios[2].checked) {//3ème paramètre check
+        if (radios[2].checked) {//3ï¿½me paramï¿½tre check
             sessionStorage.butnumber = 2;
         }
         console.log(sessionStorage.butnumber);
 
     } else {//Si pas de web storage
-        alert("Désolé votre navigateur ne supporte le web storage.\n Faites m'en part, et attendez la mise à jour");
+        alert("Dï¿½solï¿½ votre navigateur ne supporte le web storage.\n Faites m'en part, et attendez la mise ï¿½ jour");
     }
 }
 
@@ -50,7 +50,7 @@ function splittxt(file,arr) {
         arr[1][w] = mot_coup[1];
         //console.log(arr[0][w] + "==" + arr[1][w]);          
     }
-    //On enlève les valeurs nulle
+    //On enlï¿½ve les valeurs nulle
     for (var i = 0; i < arr[0].length; i++) {
         if ((arr[1][i] == undefined) | (arr[0][i] == undefined)) {//Remove undefined value from split
             arr[0].splice(i, 1);
@@ -59,7 +59,7 @@ function splittxt(file,arr) {
     }  
                 
     for (var i = 0; i < arr[0].length; i++) {
-        //Assignation de num à chaque couple de mot
+        //Assignation de num ï¿½ chaque couple de mot
         arr[2][i] = i;            
     }     
         
@@ -72,14 +72,14 @@ function verification_txt(tabletxt) {
     //Suppression des especes et trucs inutiles
     for (var lang = 0; lang < 2; lang++) {
         for (i = 0; i < tabletxt[0].length; i++) {
-            //Supression des sauts de ligne éventuels et espaces en début de chaîne
+            //Supression des sauts de ligne ï¿½ventuels et espaces en dï¿½but de chaï¿½ne
             //console.log(tabletxt[lang][i]);
 
             while ((tabletxt[lang][i][0] == "\r") | (tabletxt[lang][i][0] == "\n") | (tabletxt[lang][i][0] == " ")) {
                 tabletxt[lang][i] = tabletxt[lang][i].slice(1);
                 //console.log(tabletxt[lang][i]);
             }
-            //Suppression des espaces en fin de chaîne de caractère
+            //Suppression des espaces en fin de chaï¿½ne de caractï¿½re
             while ((tabletxt[lang][i][(tabletxt[lang][i].length - 1)] == " ") | (tabletxt[lang][i][(tabletxt[lang][i].length - 1)] == "\r") | (tabletxt[lang][i][(tabletxt[lang][i].length - 1)] == "\n")) {
                 tabletxt[lang][i] = tabletxt[lang][i].slice(0, (tabletxt[lang][i].length - 1));
                 //console.log(tabletxt[lang][i]);
@@ -92,7 +92,7 @@ function verification_txt(tabletxt) {
 function load_data() {
     if (sessionStorage.butnumber) {
         var arr = [];
-        for (var i = 0; i < 4; i++) {//4 colonne de tableau: mots anglais, mots français, le num de ligne pour le mot, et la langue (0-> anglais , 1 ->français)
+        for (var i = 0; i < 4; i++) {//4 colonne de tableau: mots anglais, mots franï¿½ais, le num de ligne pour le mot, et la langue (0-> anglais , 1 ->franï¿½ais)
             arr[i] = [];
         }
 
@@ -105,9 +105,9 @@ function load_data() {
             console.log(arr[0][i] + "==" + arr[1][i]);
         }*/
 
-        sessionStorage.setItem("tableau", JSON.stringify(arr));//Upload des données dans le web storage
+        sessionStorage.setItem("tableau", JSON.stringify(arr));//Upload des donnï¿½es dans le web storage
 
-        window.open("../mainvocab.html", "_self");//Ouverture page précèdente
+        window.open("../index.html", "_self");//Ouverture page prï¿½cï¿½dente
 
     }
     else {
